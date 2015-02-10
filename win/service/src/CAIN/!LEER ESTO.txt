@@ -1,0 +1,1 @@
+El proyecto requiere que se copie a las carpetas debug y release el archivo 'bass.dll'.
