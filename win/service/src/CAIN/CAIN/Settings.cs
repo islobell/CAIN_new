@@ -4,32 +4,32 @@ using System.Collections.Generic;
 namespace CAIN
 {
     /// <summary>
-    /// Clase para el manejo del fichero de configuración.
+    /// Clase para el manejo del archivo de configuración.
     /// </summary>
     public class Settings
     {
         /// <summary>
-        ///    Atributo que almacena la clave de registro para usar la API de AcoustID.
+        ///    Clave de registro para usar la API de AcoustID.
         /// </summary>
         public string AcoustIDApiKey { get; set; }
 
         /// <summary>
-        ///    Atributo que almacena el email de registro para usar la API de Bass.Net.
+        ///    Email de registro para usar la API de Bass.Net.
         /// </summary>
         public string BassNetEmail { get; set; }
 
         /// <summary>
-        ///    Atributo que almacena la clave de registro para usar la API de Bass.Net.
+        ///    Clave de registro para usar la API de Bass.Net.
         /// </summary>
         public string BassNetApiKey { get; set; }
 
         /// <summary>
-        ///    Atributo que almacena las rutas de las carpetas a escanear.
+        ///    Ruta de las carpetas a escanear.
         /// </summary>
         public List<string> FolderPaths { get; set; }
 
         /// <summary>
-        ///    Comprueba si la instancia del objeto <see cref="Settings" /> es válida.
+        ///    Comprueba si la instancia del objeto 'Settings' es válida.
         /// </summary>
         /// <returns>
         ///    True, si es válido. False, si no.
@@ -46,13 +46,13 @@ namespace CAIN
         }
         
         /// <summary>
-        ///    Carga el fichero de configuración.
+        ///    Crea una instancia del objeto 'Settings' a partir del fichero de configuración.
         /// </summary>
         /// <param name="file">
-        ///    <see cref="string" /> que contiene el nombre del fichero.
+        ///    La ruta del archivo de configuración.
         /// </param>
         /// <returns>
-        ///    Una instancia del objeto <see cref="Settings" />.
+        ///    Una instancia del objeto 'Settings'.
         /// </returns>
         public static Settings Load(string file)
         {

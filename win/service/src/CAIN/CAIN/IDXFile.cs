@@ -4,15 +4,15 @@ using System.Collections.Generic;
 namespace CAIN
 {
     /// <summary>
-    /// Clase para el manejo de los ficheros IDX.
+    /// Clase para el manejo de los archivos IDX.
     /// </summary>
     public static class IDXFile
     {
         /// <summary>
-        ///    Carga el fichero IDX y vuelca su contenido en una lista de códigos MD5.
+        ///    Carga el archivo IDX y vuelca su contenido en una lista de códigos MD5.
         /// </summary>
         /// <param name="file">
-        ///    La ruta del fichero IDX.
+        ///    La ruta del archivo IDX.
         /// </param>
         /// <returns>
         ///    Una lista de códigos MD5.
@@ -34,10 +34,10 @@ namespace CAIN
         }
 
         /// <summary>
-        ///    Guarda la lista de códigos MD5 en el fichero IDX.
+        ///    Guarda la lista de códigos MD5 en el archivo IDX.
         /// </summary>
         /// <param name="file">
-        ///    La ruta del fichero IDX.
+        ///    La ruta del archivo IDX.
         /// </param>
         /// <param name="hashes">
         ///    La lista de códigos MD5.

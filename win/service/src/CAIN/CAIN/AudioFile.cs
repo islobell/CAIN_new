@@ -9,32 +9,32 @@ namespace CAIN
     public class AudioFile
     {
         /// <summary>
-        ///    Atributo para decodificar el archivo de audio. 
+        ///    Decodificador de archivos de audio (usa Bass.Net). 
         /// </summary>        
         private static BassDecoder Decoder = new BassDecoder();
 
         /// <summary>
-        ///    Atributo para calcular la huella digital del archivo. 
+        ///    Calculador de huellas digitales de AcoustID. 
         /// </summary>        
         private static AcoustID.ChromaContext Fingerprinter = new AcoustID.ChromaContext();
 
         /// <summary>
-        ///    Atributo para calcular el código MD5 del archivo. 
+        ///    Calculador de códigos MD5. 
         /// </summary>        
         private static System.Security.Cryptography.MD5 MD5 = System.Security.Cryptography.MD5.Create();
 
         /// <summary>
-        ///    Atributo para realizar búsquedas en la base de datos de AcoustID. 
+        ///    Realizador de búsquedas en la base de datos de AcoustID. 
         /// </summary>
         private static AcoustID.Web.LookupService LookupService = new AcoustID.Web.LookupService();
 
         /// <summary>
-        ///    Atributo para el manejo de archivos de audio.
+        ///    Manejador de archivos de audio.
         /// </summary>
         private TagLib.File TagLibFile;
 
         /// <summary>
-        ///    Atributo que contiene el mensaje de error (si se produce alguno).
+        ///    Mensaje de error (si se produce alguno).
 		/// </summary>
         public string Error { get; private set; }
 
@@ -107,8 +107,6 @@ namespace CAIN
         /// </returns>
         private bool IsAudio()
         {
-            if (this.IsNull()) return false;
-
             List<TagLib.ICodec> codecs = new List<TagLib.ICodec>(this.TagLibFile.Properties.Codecs);
 
             if (codecs.Count == 1 &&
@@ -135,7 +133,7 @@ namespace CAIN
         }
 
         /// <summary>
-        ///    Calcula la huella digital acústica del archivo.
+        ///    Calcula la huella digital acústica del contenido musical del archivo.
         /// </summary>
         /// <returns>
         ///    La huella digital, si se ha podido calcular. Una cadena vacía, si no.
@@ -154,7 +152,7 @@ namespace CAIN
         }
 
         /// <summary>
-        ///    Calcula el identificador (MBID) del archivo en base a su huella digital.
+        ///    Calcula el identificador (MBID) del contenido musical del archivo en base a su huella digital.
         /// </summary>
         /// <param name="fingerprint">
         ///    La huella digital del archivo.
